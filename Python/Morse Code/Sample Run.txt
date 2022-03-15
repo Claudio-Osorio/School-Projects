@@ -1,0 +1,33 @@
+Welcome to the Morse Code Script by Claudio Osorio
+Please enter a string: 
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+You entered:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+.-
+-...
+-.-.
+-..
+.
+..-.
+--.
+....
+..
+.---
+-.-
+.-..
+--
+-.
+---
+.--.
+--.-
+.-.
+...
+-
+..-
+...-
+.--
+-..-
+-.--
+--..
+Thanks for using my program. Have a nice day.
+
+Process finished with exit code 0
