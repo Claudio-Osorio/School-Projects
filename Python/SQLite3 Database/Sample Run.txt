@@ -1,0 +1,58 @@
+Welcome to Claudio Osorio's SQLite Database Program (Part 1)
+
+Agents table dropped.
+SecretAgents Table created
+Changes were saved.
+('1', 'Princess Diana', 'Lady Di', 1, 'test123')
+('2', 'Henry Thorgood', 'Goody 2 shoes', 3, 'test123')
+('3', 'Tina Fairchild', 'Happy', 1, 'test123')
+('4', 'Tom Smith', 'Sleepy', 1, 'test987')
+('5', 'Kim Lovegood', 'Snoozy', 2, 'test987')
+('6', 'Tim Harris', 'Doc', 3, 'test987')
+Connection closed.
+This script has ended successfully
+
+Process finished with exit code 0
+
+########## E N D  O F  S C R I P T  1 ##########
+
+Welcome to Claudio Osorio's SQLite Database Program (Part 2)
+
+
+This is what the untouched table looks like:
+('1', 'Princess Diana', 'Lady Di', 1, 'test123')
+('2', 'Henry Thorgood', 'Goody 2 shoes', 3, 'test123')
+('3', 'Tina Fairchild', 'Happy', 1, 'test123')
+('4', 'Tom Smith', 'Sleepy', 1, 'test987')
+('5', 'Kim Lovegood', 'Snoozy', 2, 'test987')
+('6', 'Tim Harris', 'Doc', 3, 'test987')
+
+Showing All Data Selected From a Single Table:
+[('1', 'Princess Diana', 'Lady Di', 1, 'test123'), ('2', 'Henry Thorgood', 'Goody 2 shoes', 3, 'test123'), ('3', 'Tina Fairchild', 'Happy', 1, 'test123'), ('4', 'Tom Smith', 'Sleepy', 1, 'test987'), ('5', 'Kim Lovegood', 'Snoozy', 2, 'test987'), ('6', 'Tim Harris', 'Doc', 3, 'test987')]
+
+Displaying table after deletion of row where AgentId = 6:
+('1', 'Princess Diana', 'Lady Di', 1, 'test123')
+('2', 'Henry Thorgood', 'Goody 2 shoes', 3, 'test123')
+('3', 'Tina Fairchild', 'Happy', 1, 'test123')
+('4', 'Tom Smith', 'Sleepy', 1, 'test987')
+('5', 'Kim Lovegood', 'Snoozy', 2, 'test987')
+
+Displaying table update "Predator" replaced single row AgentAlias:
+('1', 'Princess Diana', 'Lady Di', 1, 'test123')
+('2', 'Henry Thorgood', 'Predator', 3, 'test123')
+('3', 'Tina Fairchild', 'Happy', 1, 'test123')
+('4', 'Tom Smith', 'Sleepy', 1, 'test987')
+('5', 'Kim Lovegood', 'Snoozy', 2, 'test987')
+
+Returning Table After Selecting Columns "AgentName" and "AgentAlias"
+[('Princess Diana', 'Lady Di'), ('Henry Thorgood', 'Predator'), ('Tina Fairchild', 'Happy'), ('Tom Smith', 'Sleepy'), ('Kim Lovegood', 'Snoozy')]
+
+Returning Rows After Selecting AgentId 3 and 4
+[('3', 'Tina Fairchild', 'Happy', 1, 'test123'), ('4', 'Tom Smith', 'Sleepy', 1, 'test987')]
+
+Returning Selected "AgentAlias" where AgentName is Princess Diana:
+[('Lady Di',)]
+This script has ended successfully
+
+Process finished with exit code 0
+########## E N D  O F  S C R I P T  2 ##########
