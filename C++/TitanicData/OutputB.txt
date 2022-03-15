@@ -1,0 +1,17 @@
+
+Welcome to Titanic Data: Created by Claudio Osorio
+
+Options
+A) Display count of people who lived and died...
+B) Display count of people who lived by Passenger Class...
+Please select option (A-B)...
+Number of people who lived By Class
+               Class	Number
+            1stClass       201
+            2ndClass       119
+            3rdClass       180
+            AlaCarte         3
+                Deck        43
+              Engine        72
+         Victualling        94
+This program has finished without errors
