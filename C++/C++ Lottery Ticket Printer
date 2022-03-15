@@ -1,0 +1,143 @@
+
+// Written by Claudio Osorio 1/13/2021
+
+#include <iostream>
+#include <cstdlib>
+#include <vector>
+#include <iomanip>
+#include <ctime>
+using namespace std;
+const int START_RANGE_NUM_BALLS = 3;       //Starting range for the number of possible balls
+const int END_RANGE_NUM_BALLS = 7;         //Ending range for the number of possible balls
+const int MAX_RANDOM_NUM_START_RANGE = 45; //Starting range for the maximum amount of possible random numbers
+const int MAX_RANDOM_NUM_END_RANGE = 70;   //Ending range for the maximum amount of possible random numbers
+const int START_RANGE_NUM_TICKETS = 1;     //Starting range for the number of tickets
+const int END_RANGE_NUM_TICKETS = 100;     //Ending range for the number of tickets
+
+//Prototypes
+void validateRange(int &, const int,const int); //Makes sure the range is within the given margins
+int Odds_Calculation(int,int); //calculates the odds of winning the lottery
+long double Factorial (int num); //calculates the factorial of any given number
+void Print_Tickets(int numBalls, int maxRangeRanNum, int numTickets); //prints to the screen the tickets
+
+
+int main() {
+
+    int numBalls;
+    int maxRangeRanNum;
+    int numTickets;
+    int odds;
+
+    cout << "Welcome to Claudio Osorio Ticket Printer Program (TPP)" << endl;
+    cout << "\nTo begin please enter the number of balls or numbers you wish to pick from.\n"
+            "The number must be between 3 and 7: " << endl;
+    cin >> numBalls;
+    //Makes sure the range is within the requirements
+    validateRange(numBalls,START_RANGE_NUM_BALLS,END_RANGE_NUM_BALLS);
+
+
+    cout << "Enter in the largest number in the lottery."
+            "\nThe number must be between 45-70: " << endl;
+    cin >> maxRangeRanNum;
+    //Makes sure the range is within the requirements
+    validateRange(maxRangeRanNum,MAX_RANDOM_NUM_START_RANGE,MAX_RANDOM_NUM_END_RANGE);
+
+    cout << "Enter the number of tickets 1-100: " << endl;
+    cin >> numTickets;
+    validateRange(numTickets,START_RANGE_NUM_TICKETS,END_RANGE_NUM_TICKETS);
+
+    //Calculating Odds
+    odds = Odds_Calculation(maxRangeRanNum,numBalls);
+
+    //Echoing Information Back To The User
+    cout << "=+=+=+=+=+=+SUMMARY=+=+=+=+=+=+" << endl;
+    cout << "-Your tickets will have " << numBalls << " numbers" << endl;
+    cout << "-Your numbers will range from 1 to " << maxRangeRanNum << endl;
+    cout << "-Your odds are 1 in " << odds <<"\n\n=+=+=+=+YOUR TICKETS+=+=+=+="<< endl << "  ";
+
+    //Shows the tickets according to the given specifications from above
+    Print_Tickets(numBalls, maxRangeRanNum, numTickets);
+
+    cout << "\nYour tickets were successfully printed.\nPlease take them and come back again later!" << endl;
+    return 0;
+}
+
+//Makes sure the range is within the starting and ending range
+void validateRange(int &givenValue,const int startingRange,const int endingRange)
+{
+    while (givenValue < startingRange || givenValue > endingRange)
+    {
+        cout << "Sorry. The value you entered is not within the expected range.\n"
+                "Please enter a value between " << startingRange <<" and " << endingRange << ": ";
+        cin >> givenValue;
+
+    }
+}
+
+//Calculates the results of the odds
+int Odds_Calculation(int N,int K)
+{
+    int oddsResult;
+    oddsResult =  ( Factorial(N) / ( Factorial(K) * Factorial( N - K ) ) );
+    return oddsResult;
+}
+
+//Calculates the factorial of any given number
+long double Factorial (int num)
+{
+    long double factorial = 1;
+    for(int i = 1; i <= num; ++i)
+    {
+        factorial *= i;
+    }
+
+    return factorial;
+};
+
+//Prints the tickets to the screen one row of numbers at the time
+void Print_Tickets(int numBalls, int maxRangeRanNum, int numTickets)
+{
+    // int allTickets [10] [7];
+    vector <int> oneTicket(numBalls);
+    int ball; //Counts balls from 0 to < numBalls
+    int ticket; //Counts tickets from 0 to <numTickets
+    int z; //Alternative count to  int ball.
+    int count; //Alternative count to int ball.
+
+    //The nested loops are in the following order outside to inside
+    // 1.Ticket (row), 2. Ball number (column individual value) 3. Check no duplicate balls exist
+    srand(time(0));
+    for ( ticket = 0; ticket < numTickets; ticket++)
+    {
+        for ( ball = 0; ball < numBalls; ball++)
+        {
+            int randomNumber;
+            randomNumber = rand() % maxRangeRanNum + 1;
+
+            //RE-RUN random number if it is a duplicate with the existing ticket values
+            for ( z = 0; z < numBalls; z++)
+            {
+                if ( randomNumber != oneTicket[z])
+                {
+                }
+                else
+                {
+                    randomNumber = rand() % maxRangeRanNum + 1;
+                    z = 0; //makes sure the new generated value is checked against all the existing ticket values
+                }
+
+            }
+
+            oneTicket[ball] = randomNumber;
+        }
+
+        for (count = 0; count < numBalls; count++)
+        {
+            cout << oneTicket [count] << setw(4);
+        }
+
+        cout << endl;
+    }
+
+
+}
