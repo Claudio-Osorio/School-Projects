@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Send Authenticated Message to Boss</title>
+  </head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+{% if session['logged_in']%}
+  <h1>Send Authenticated Message to Boss</h1>
+      <form action="{{ url_for('authMessageBoss') }}"  method="POST" enctype="multipart/form-data">
+         Message<br>
+         <input type="password" name="message"><br>
+
+         <input type="submit" value="Submit"><br>
+      </form>
+{% endif %}
+</body>
+  </html>

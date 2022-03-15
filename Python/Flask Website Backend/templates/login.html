@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+      <form action="{{ url_for('login') }}"  method="POST">
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+            <li> {{ message }} </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+  <h4>LOGIN:</h4>
+     <input type="text" placeholder="Username" name="UserName" ><br>
+     <input type="password" placeholder="Password" name="Password" ><br>
+     <input type="submit" value="Log In"><br>
+</body>
+</html>
