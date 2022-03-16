@@ -1,0 +1,23 @@
+BIG-O COMPLEXITY ANALYSIS
+1. Reading the input set 
+-In my program I use  "cin.get()" which immediately every character one at the time.
+In the worst case scenario it will still take constant time to obtain every character. O(1)
+
+2. Storing the characters / words / numbers in your chosen containers, and setting their tracking values 
+-Since the pool of characters/words/numbers can be wildly large I chose hash "map" from the STL <map> to store words,
+numbers, characters. The <map> library allows me to use functions such as  myMap.find('c') which are efficient in comparison to other methods that take longer when searching for values stored in containers as they go through all of the values to match the correct one. The time complexity for finding values is approximately at O(logn) which is better than linear time thanks to the internal hashing.
+For sorting I used "sort()" on a set of vectors containing the map. For sort() the documentation explains it to be a very complex and advanced sorting algorithm that is most comparable to quicksort but modified to be able to switch between heapsort and others according to the several internal specifications and arguments such as the amount of elements to be sorted and the location. sort() is said to be better than qsort(). "sort()" is presumed to have a time complexity of O(nlogn) on the worst case scenarios.
+
+3. Looking up the final tracking info on your character / word / number frequencies 
+- When I had to store all the characters/words/numbers into maps the time was constant O(1) for each of the n items.
+- Before sorting the stored values I had to "emplace" them from the map to vectors. Since there are n items the for loop takes O(n)
+
+4. Deciding on (and accessing for output) your "Top Ten" most frequent list for each case 
+- After the sorting was complete the results were printed to the screen. It's a for loop that uses an iterator and since there are n items it should have taken O(n) time but I break out of the loop after the first 10 items so in total it takes approximately O(10) for the 10 elements + O(1) for the if statement  for a total time of approximately O(11).
+
+
+5. Any other important algorithm/tasks you perform to complete the job
+-My functions such as "AddWord" lowercase the word character by character if there are n characters time is O(n)
+-Storing the modified strings (to lowercase) takes O(1)
+-Adding a new ocurrence of a character or word to the existing count takes O(1)
+-The whole process of checking if an element is already stored uses an if statement with a myMap.find("word") that in total takes no more than O(logn) for a single word that is being stored/counted.
