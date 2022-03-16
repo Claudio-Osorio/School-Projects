@@ -1,0 +1,34 @@
+template<typename T>
+void List<T>:: reverse()
+{
+    List<T> newList;
+    iterator oldItr = begin();
+    for (int x = 0; x < theSize; ++x)
+    {
+
+        newList.push_front(oldItr.current->data);
+        oldItr++;
+    }
+    *this = newList;
+}
+
+Analysis of reverse():
+Reversing "n" elements from the list of size n would be the worst case scenario.
+Since I would have to process it once for each element then I believe the program will not take more than O(n) time to process n elements in the list.
+
+template <typename T>
+template <typename PREDICATE>
+void  List<T>:: remove_if(PREDICATE pred)
+{
+    typename List<T>::iterator myItr = begin();
+    while (myItr != end())
+    {
+        if (pred(myItr.current->data))
+            myItr = erase(myItr);
+        else
+            myItr.current = myItr.current->next;
+    }
+}
+
+Analysis of remove_if():
+"remove_if" goes through all the elements in the list and runs the "pred" once for each. In the worst case scenario it would remove all the elements. (a total of "n" elements) Therefore I believe it will not take more than O(n) time to process n elements in the list.
