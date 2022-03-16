@@ -1,0 +1,6 @@
+The function "makeEmpty" has a big O "O(n)" for the worst case scenario
+More details: 
+The function is recursive and checks if the children are nullptr.  O(1)
+The function also sets children to nullptr. O(1)
+The function calls iteself n times that is once for each node considering that there are n nodes. O(n)
+Since the time complexity is defined by the largest term then the function has a big O of O(n).
