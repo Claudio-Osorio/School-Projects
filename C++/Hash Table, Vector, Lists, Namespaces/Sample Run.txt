@@ -1,0 +1,496 @@
+~/COP4530/Assignment5>make
+g++ -c -std=c++11 -lcrypt passserver.cpp hashtable.h
+g++ -c -std=c++11 -lcrypt proj5.cpp
+g++ -std=c++11 -o proj5.x proj5.o passserver.o -lcrypt
+~/COP4530/Assignment5>proj5.x
+
+Welcome to Hash Table by Claudio Osorio
+Enter preferred hash table capacity: 7
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: a
+New Username: Test1
+New Password: Test2
+The following has been added 
+User: Test1
+Pass: Test2
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: d
+v[0]: 
+v[1]: 
+v[2]: 
+v[3]: 
+v[4]: Test1 ylx7HyExSh3j21PUlHHO.0
+v[5]: 
+v[6]: 
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: F
+Enter username to be found: Test3
+User "Test3" was NOT FOUND
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: f
+Enter username to be found: Test1  
+User "Test1" was FOUND
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: r
+Please enter the username you want to remove: Test1
+User "Test1" has been successfully removed
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: r
+Please enter the username you want to remove: Test5
+ERROR: user could not be removed. Maybe it doesn't exist
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: s
+Hashtable size is 0
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: a
+New Username: Claudio
+New Password: Osorio
+The following has been added 
+User: Claudio
+Pass: Osorio
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: d
+v[0]: 
+v[1]: Claudio bkzBoFHDu0SHnqTIrn/NC/
+v[2]: 
+v[3]: 
+v[4]: 
+v[5]: 
+v[6]: 
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: w
+Specify name of the file that will store all the data: users
+The File was Successfully Stored
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: c
+Enter user: Test1
+Enter password: mypass
+Enter new password: mypass2
+
+ERROR: User "Test1" password failed to be changed
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: c
+Enter user: Claudio
+Enter password: Osorio
+Enter new password: idon'tlikepasswords
+
+ERROR: This key already exists in the hashtable and cannot be added
+The password has been successfully changed for the user "Claudio"
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: d
+v[0]: 
+v[1]: Claudio bkzBoFHDu0SHnqTIrn/NC/
+v[2]: 
+v[3]: 
+v[4]: 
+v[5]: 
+v[6]: 
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: x
+##### END ######
+~/COP4530/Assignment5>proj5.x
+Welcome to Hash Table by Claudio Osorio
+Enter preferred hash table capacity: 90
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: d
+v[0]: 
+v[1]: 
+v[2]: 
+v[3]: 
+v[4]: 
+v[5]: 
+v[6]: 
+v[7]: 
+v[8]: 
+v[9]: 
+v[10]: 
+v[11]: 
+v[12]: 
+v[13]: 
+v[14]: 
+v[15]: 
+v[16]: 
+v[17]: 
+v[18]: 
+v[19]: 
+v[20]: 
+v[21]: 
+v[22]: 
+v[23]: 
+v[24]: 
+v[25]: 
+v[26]: 
+v[27]: 
+v[28]: 
+v[29]: 
+v[30]: 
+v[31]: 
+v[32]: 
+v[33]: 
+v[34]: 
+v[35]: 
+v[36]: 
+v[37]: 
+v[38]: 
+v[39]: 
+v[40]: 
+v[41]: 
+v[42]: 
+v[43]: 
+v[44]: 
+v[45]: 
+v[46]: 
+v[47]: 
+v[48]: 
+v[49]: 
+v[50]: 
+v[51]: 
+v[52]: 
+v[53]: 
+v[54]: 
+v[55]: 
+v[56]: 
+v[57]: 
+v[58]: 
+v[59]: 
+v[60]: 
+v[61]: 
+v[62]: 
+v[63]: 
+v[64]: 
+v[65]: 
+v[66]: 
+v[67]: 
+v[68]: 
+v[69]: 
+v[70]: 
+v[71]: 
+v[72]: 
+v[73]: 
+v[74]: 
+v[75]: 
+v[76]: 
+v[77]: 
+v[78]: 
+v[79]: 
+v[80]: 
+v[81]: 
+v[82]: 
+v[83]: 
+v[84]: 
+v[85]: 
+v[86]: 
+v[87]: 
+v[88]: 
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: l
+Specify password file name to load from: users
+ERROR: This key already exists in the hashtable and cannot be added
+File "users" successfully loaded
+
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: d
+v[0]: 
+v[1]: 
+v[2]: 
+v[3]: 
+v[4]: 
+v[5]: 
+v[6]: 
+v[7]: 
+v[8]: 
+v[9]: 
+v[10]: 
+v[11]: 
+v[12]: 
+v[13]: 
+v[14]: 
+v[15]: 
+v[16]: 
+v[17]: 
+v[18]: 
+v[19]: 
+v[20]: 
+v[21]: 
+v[22]: 
+v[23]: 
+v[24]: 
+v[25]: 
+v[26]: 
+v[27]: 
+v[28]: 
+v[29]: 
+v[30]: 
+v[31]: 
+v[32]: 
+v[33]: 
+v[34]: 
+v[35]: 
+v[36]: 
+v[37]: 
+v[38]: 
+v[39]: 
+v[40]: 
+v[41]: 
+v[42]: 
+v[43]: 
+v[44]: 
+v[45]: 
+v[46]: 
+v[47]: 
+v[48]: 
+v[49]: 
+v[50]: 
+v[51]: 
+v[52]: 
+v[53]: 
+v[54]: 
+v[55]: 
+v[56]: 
+v[57]: 
+v[58]: 
+v[59]: 
+v[60]: 
+v[61]: 
+v[62]: 
+v[63]: Claudio bkzBoFHDu0SHnqTIrn/NC/
+v[64]: 
+v[65]: 
+v[66]: 
+v[67]: 
+v[68]: 
+v[69]: 
+v[70]: 
+v[71]: 
+v[72]: 
+v[73]: 
+v[74]: 
+v[75]: 
+v[76]: 
+v[77]: 
+v[78]: 
+v[79]: 
+v[80]: 
+v[81]: 
+v[82]: 
+v[83]: 
+v[84]: 
+v[85]: 
+v[86]: 
+v[87]: 
+v[88]: 
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: l
+Specify password file name to load from: somefile
+Error: File cannot be openedsomefile
+
+
+l - Load From File
+a - Add User
+r - Remove User
+c - Change User Password
+f - Find User
+d - Dump HashTable
+s - HashTable Size
+w - Write to Password File
+x - Exit program
+
+Enter choice: x
+##### END ######
+
