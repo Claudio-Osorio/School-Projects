@@ -1,4 +1,7 @@
 # Documentation  
+## Click for Youtube Video Demo
+[![Project Demo -  Youtube Video](https://img.youtube.com/vi/3xXELiX7Wgs/0.jpg)](https://www.youtube.com/watch?v=3xXELiX7Wgs)
+
 ## Instructions  
 1. Execute the SimonGame.jar file.
 2. On the Setup Window: Enter Your Desired Player Name
@@ -14,7 +17,7 @@
 	**Winning:** Repeating the exact sequence for 15 turns
 	
 	**Highscore:** When the game ends due to a win or lose if the current score is higher or equal than the previous highs score then a new high score will be saved and replace the previous one. Notice that if the previous high score is the maximum amount of points and the new high score is the same then the previous one will be replaced.
-	
+
 ## Details about the settings  
 
 ### Allotted Time: (reaction time a player has to press a button)  
